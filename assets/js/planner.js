@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
 
     // add the current date to the current date id in HTML
@@ -11,8 +11,8 @@ $(document).ready(function (){
     for (var hour = 9; hour < 18; hour++) {
         scheduledHours.push(moment({    
             hour
-        }).format('h a'));
-        $('.container').append(`<div class="row time-block" datatime="${hour}">
+        }).format('h  a'));
+        $('.container').append(`<div class="row time-block" data-time="${hour}">
             <!--hour column-->
                 <div class="col-sm col-md-2 hour">
                   <p class=dayHour>${moment({hour}).format('h a')}</p>
@@ -34,7 +34,7 @@ $(document).ready(function (){
     var m = moment();
     $.each($(".time-block"), function (index, value) {
         let dateHour = $(value).attr("data-time");
-        if (Number(datehour) === m.hour()) {
+        if (Number(dateHour) === m.hour()) {
             $(this).find("textarea").addClass('present');
         } else if (Number(dateHour) < m.hour()) {
             $(this).find("textarea").addClass('past');
@@ -44,7 +44,7 @@ $(document).ready(function (){
     });
 
     // check for local storage to set value to the object
-    var timeObject = {};
+    let timeObject = {};
         if (localStorage.getItem('timeObject')) {
             timeObject = JSON.parse(localStorage.getItem('timeObject'));
         } else{
