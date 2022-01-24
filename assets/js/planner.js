@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     // add the current date to the current date id in HTML
-    var date = moment().format('dddd, MMMM do YYYY, h:mm:ss a');
+    var date = moment().format('dddd, MMMM Do YYYY');
     $("#currentDay").html(date);
 
     // create HTML timeblocks with for loop starting 9am to 5pm
@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('.container').append(`<div class="row time-block" data-time="${hour}">
             <!--hour column-->
                 <div class="col-sm col-md-2 hour">
-                  <p class=dayHour>${moment({hour}).format('h a')}</p>
+                  <p class=dayHour>${moment({hour}).format('h  a')}</p>
                 </div>
 
             <!--user input text area-->
@@ -74,7 +74,8 @@ $(document).ready(function () {
             //set timeObject value attribute
             var textValue = $(this).closest(".time-block").find(".textArea").val();
 
-            console.log(textValue)
+            //console.log(timeValue);
+            //console.log(textValue);
         });
 
 });
