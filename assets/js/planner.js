@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     // add the current date to the current date id in HTML
-    var date = moment().format('dddd, MMMM Do YYYY');
+    var date = moment().format('dddd, MMMM Do YYYY, h:mm a');
     $("#currentDay").html(date);
 
     // create HTML timeblocks with for loop starting 9am to 5pm
