@@ -74,8 +74,8 @@ $(document).ready(function () {
             //set timeObject value attribute
             var textValue = $(this).closest(".time-block").find(".textArea").val();
 
-            //console.log(timeValue);
-            //console.log(textValue);
+            console.log(timeValue);
+            console.log(textValue);
         });
 
 });
